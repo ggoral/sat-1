@@ -34,7 +34,7 @@ $ git remote add origin <YOUR_GIT_REPOSITORY>
 * Change the application name (and commit the change):
 
 ```bash
-$ APP_NAME=AwesomeApp; for i in `find . -type f | grep -v .git`; do if [ `grep SAT $i | wc -l` != 0 ]; then sed -i '' "s/SAT/$APP_NAME/g" $i; fi; done; git commit -am "SAT => $APP_NAME"
+$ APP_NAME=AwesomeApp; for i in `find . -type f | grep -v .git`; do if [ `grep SAT $i | wc -l` != 0 ]; then sed -i "s/SAT/$APP_NAME/g" $i; fi; done; git commit -am "SAT => $APP_NAME"
 ```
 
 **Note**: Note the `APP_NAME` variable. You should change the application name
